@@ -5,7 +5,6 @@ define([
     'text!./templates/headerTemplate.html',
     'text!./templates/shareTemplate.html',
     'text!./templates/bodyTemplate.html',
-    './ractive-events-tap.js'
 ], function(
     Ractive,
     $,
