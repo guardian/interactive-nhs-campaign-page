@@ -11,7 +11,7 @@ define([
     'text!./templates/chapters/actionTemplate.html',
     'text!./templates/chapters/updatesTemplate.html',
     './ractive-events-tap.js',
-    'jQuery.XDomainRequest'
+    'XDomainRequest'
 ], function(
     Ractive,
     $,
@@ -237,8 +237,6 @@ define([
         }
         window.open(shareWindow, platform + "share", "width=640,height=320");
     }
-
-  
 
     function resetMobile(){
         $('#standard-article-container').addClass('interactiveStyling');
