@@ -1,5 +1,5 @@
-# interactive-climate-page 
-Landing page for Climate Change campaign
+# interactive-NHS-page
+Landing page for This Is The NHS campaign
 
 ## Getting started
 If you haven't already installed [nodejs](http://nodejs.org/download/),
