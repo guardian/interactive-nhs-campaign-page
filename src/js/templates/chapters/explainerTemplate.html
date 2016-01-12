@@ -1,0 +1,57 @@
+<section class="chapter" id="explainer">
+	<div class="wrapper">
+		<h2 class="chapterHeading">Why keep fossil fuels in the ground</h2>
+		<div class="chapterContent">
+			<div id="explainerVideoContainer" class="m-col-large">
+				<div id="videoHolder">
+					<iframe src="https://embed.theguardian.com/embed/video/environment/video/2015/mar/16/the-biggest-story-in-the-world-why-we-need-to-keep-fossil-fuels-in-the-ground-video" scrolling="no" frameborder="none" height="100%" width="100%"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="chapter" id="quote">
+	<div class="wrapper">
+		<h2 class="chapterHeading">What they say</h2>
+		<div class="chapterContent">
+			<div id="quoteContainer" class="m-col-large">
+				{{#with quote[Math.floor(Math.random()*quote.length)]}}
+					<quote>{{text}}”</quote>
+					<h4 class="quoteCredit">{{credit}}</h4>
+					<div id="quoteShare">
+						<shareContainer media="['twitter','facebook']" message="“{{text}}”" />
+					</div>
+				{{/with}}
+			</div>
+		</div>
+	</div>
+</section>
+<section class="chapter" id="faq">
+	<div class="wrapper">
+		<h2 class="chapterHeading">Frequently Asked Questions</h2>
+		<div class="chapterContent">
+			<div id="faqContainer">
+				<div id="faqQuestions">
+					{{#each faq}}
+						{{#if flag}}
+							<div id="flaggedQuestion" class="m-col-large">
+								<h2>{{headline}}</h2>
+								{{#each text}}
+									<p>{{{.}}}</p>
+								{{/each}}
+							</div>
+						{{/if}}
+					{{/each}}
+				</div>
+				<div class="m-col-large">
+					<div id="allFaqQuestions">
+						{{#each faq}}
+							<p class="faqQuestion {{#flag}}flagged{{/flag}}" on-tap="flagQuestion:{{this}}"><span>{{{headline}}}</span></p>
+						{{/each}}
+					</div>
+				</div>
+				<!-- <a href="#" class="externalLink">Read the ful FAQ</a> -->
+			</div>
+		</div>
+	</div>
+</section>
