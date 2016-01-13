@@ -5,13 +5,15 @@ define([
     'text!./templates/headerTemplate.html',
     'text!./templates/shareTemplate.html',
     'text!./templates/bodyTemplate.html',
+    'text!./templates/footerTemplate.html'
 ], function(
     Ractive,
     $,
     appTemplate,
     headerTemplate,
     shareTemplate,
-    bodyTemplate
+    bodyTemplate,
+    footerTemplate
 ) {
    'use strict';
     var data;
@@ -45,6 +47,7 @@ define([
         var appHeader           = Ractive.extend({template:headerTemplate});
         var shareContainer      = Ractive.extend({template:shareTemplate});
         var bodyContainer       = Ractive.extend({template:bodyTemplate});
+        var footerContainer     = Ractive.extend({template:footerTemplate});
 
         var addEvent = function(object, type, callback) {
             if (object == null || typeof(object) == 'undefined') return;
@@ -63,7 +66,8 @@ define([
             components: {
                 appHeader:appHeader,
                 shareContainer:shareContainer,
-                bodyContainer:bodyContainer
+                bodyContainer:bodyContainer,
+                footerContainer:footerContainer
             },
             data:data
         })

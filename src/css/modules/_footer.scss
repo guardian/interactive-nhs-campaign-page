@@ -1,0 +1,9 @@
+.this-is-the-nhs__sign-up--bottom {
+    .this-is-the-nhs__arrow {
+        background-color: $c-light-blue;
+
+        &:after {
+            border-left-color: $c-light-blue;
+        }
+    }
+}
