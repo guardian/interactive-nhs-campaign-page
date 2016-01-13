@@ -34,7 +34,6 @@ define([
                     response.sheets[key] = newSheet;
                 }
                 data = response.sheets;
-                console.log(el);
                 renderPage(target);
             },
             error:function(err){
