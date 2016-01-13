@@ -1,0 +1,76 @@
+.this-is-the-nhs__header {
+    padding: $gs-baseline 0;
+    margin-bottom: $gs-baseline;
+}
+
+.this-is-the-nhs__standfirst {
+    @include fs-secondary;
+    color: $c-blue;
+    padding-left: $gs-gutter;
+    margin-left: -$gs-gutter;
+    margin-bottom: 0;
+    letter-spacing: -0.3px;
+}
+
+.this-is-the-nhs__title {
+    @include fs-primary;
+}
+
+.this-is-the-nhs__line {
+    color: $c-white;
+}
+
+.this-is-the-nhs__line--one {
+    min-width: 215px;
+    width: 70%;
+    max-width: 354px;
+    padding-left: $gs-gutter;
+    margin-left: -44px;
+    margin-right: auto;
+    padding-right: $gs-gutter / 2;
+    background-color: $c-blue;
+    text-align: right;
+}
+
+.this-is-the-nhs__line--two {
+    min-width: 262px;
+    width: 70%;
+    padding-left: $gs-gutter / 2;
+    margin-left: auto;
+    margin-right: -$gs-gutter;
+    background-color: $c-dark-blue;
+}
+
+.this-is-the-nhs__arrow {
+    position: relative;
+    background-color: $c-yellow;
+    max-width: 20%;
+    margin-left: -$gs-gutter;
+    padding-left: $gs-gutter;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        height: 0;
+        width: 0;
+        pointer-events: none;
+        border: solid transparent;
+        border-color: transparent;
+        border-left-color: $c-yellow;
+        border-width: 55px;
+        margin-top: -55px;
+    }
+}
+
+.this-is-the-nhs__sign-up__title {
+    display: none;
+    @include fs-secondary;
+}
+
+.this-is-the-nhs__sign-up__description {
+    display: none;
+    @include fs-meta;
+    color: $c-white;
+}

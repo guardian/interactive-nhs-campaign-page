@@ -4,7 +4,7 @@ var currentTime = +new Date();
 var versionedAssetPath = 'assets-' + currentTime;
 var CDN = 'http://interactive.guim.co.uk/';
 var deployAssetPath = CDN + pkg.config.s3_folder + versionedAssetPath;
-var localAssetPath = 'http://localhost:' + pkg.config.port + '/assets';
+var localAssetPath = 'https://localhost:' + pkg.config.port + '/assets';
 
 module.exports = function(grunt) {
   var isDev = !(grunt.cli.tasks && grunt.cli.tasks[0] === 'deploy');
@@ -15,6 +15,7 @@ module.exports = function(grunt) {
         options: {
           port: pkg.config.port,
           hostname: '*',
+          protocol: 'https',
           base: './build/',
           livereload: true,
           middleware: function (connect, options, middlewares) {

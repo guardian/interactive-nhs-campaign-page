@@ -18,6 +18,7 @@ define([
 
     function init(el, context, config, mediator) {
         var headCount = -1;
+        var target = $('#article');
         $.ajax({
             url: 'https://interactive.guim.co.uk/docsdata-test/1MPqC3c6l8wEYWZMBNOx2vKLUz09WAQk5Ml2P03zdMr0.json',
             success: function(response){
@@ -31,7 +32,8 @@ define([
                     response.sheets[key] = newSheet;
                 }
                 data = response.sheets;
-                renderPage(el);
+                console.log(el);
+                renderPage(target);
             },
             error:function(err){
                 // console.log('data not loading',err);

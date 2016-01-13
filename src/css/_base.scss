@@ -1,0 +1,43 @@
+// Frontend Breakpoints
+$mq-breakpoints: (
+    mobile:          gs-span(4)  + $gs-gutter,   // 320px
+    mobileLandscape: gs-span(6)  + $gs-gutter,   // 480px
+    phablet:         gs-span(8)  + $gs-gutter*2, // 660px
+    tablet:          gs-span(9)  + $gs-gutter*2, // 740px
+    desktop:         gs-span(12) + $gs-gutter*2, // 980px
+    leftCol:         gs-span(14) + $gs-gutter*2, // 1140px
+    wide:            gs-span(16) + $gs-gutter*2, // 1300px
+);
+
+// Font Sizes
+@mixin fs-primary() {
+    @include fs-headline(9);
+    font-size: 66px;
+    line-height: 78px;
+    font-weight: 100;
+}
+
+@mixin fs-secondary() {
+    @include fs-header(1);
+}
+
+@mixin fs-meta() {
+    @include fs-textSans(2);
+}
+
+// Colour
+$c-grey: guss-colour(neutral-7, $pasteup-palette);
+$c-blue: darken(guss-colour(news-support-2, $pasteup-palette), 10%);
+$c-dark-blue: guss-colour(news-support-6, $pasteup-palette);
+$c-light-blue: guss-colour(news-support-3, $pasteup-palette);
+$c-black: guss-colour(neutral-1, $pasteup-palette);
+$c-yellow: guss-colour(multimedia-main-2, $pasteup-palette);
+$c-white: #ffffff;
+
+.this-is-the-nhs__bar {
+    display: block;
+    height: gs-height(2) - $gs-baseline;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: guss-colour(neutral-7, $pasteup-palette);
+}
