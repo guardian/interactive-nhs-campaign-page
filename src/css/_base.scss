@@ -15,10 +15,19 @@ $mq-breakpoints: (
     font-size: 66px;
     line-height: 78px;
     font-weight: 100;
+
+    @include mq(desktop) {
+        font-size: 94px;
+        line-height: 100px;
+    }
 }
 
 @mixin fs-secondary() {
     @include fs-header(1);
+
+    @include mq(desktop) {
+        @include fs-header(2);
+    }
 }
 
 @mixin fs-meta() {
@@ -40,4 +49,8 @@ $c-white: #ffffff;
     padding: 3px;
     box-sizing: border-box;
     background-color: guss-colour(neutral-7, $pasteup-palette);
+
+    @include mq(desktop) {
+        height: gs-height(2) + $gs-baseline;
+    }
 }

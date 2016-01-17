@@ -4,12 +4,63 @@
 }
 
 .this-is-the-nhs__standfirst {
+    position: relative;
     @include fs-secondary;
     color: $c-blue;
     padding-left: $gs-gutter;
     margin-left: -$gs-gutter;
     margin-bottom: 0;
     letter-spacing: -0.3px;
+    padding-right: $gs-gutter / 2;
+
+    @include mq(400px) {
+        padding-left: 4px;
+        margin-left: gs-span(1);
+        max-width: gs-span(6);
+    }
+
+    @include mq(tablet) {
+        margin-left: gs-span(2);
+    }
+
+    @include mq(desktop) {
+        margin-left: gs-span(3);
+        max-width: gs-span(7);
+    }
+
+    p {
+        max-width: gs-span(4);
+
+        @include mq(desktop) {
+            max-width: 340px;
+        }
+    }
+
+    .this-is-the-nhs__circle {
+        bottom: -16px;
+        right: 20px;
+        background-color: $c-light-blue;
+
+        @include mq(400px) {
+            right: 40px;
+        }
+
+        @include mq(desktop) {
+            bottom: -27px;
+        }
+    }
+}
+
+.this-is-the-nhs__circle {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    @include mq(desktop) {
+        width: 54px;
+        height: 54px;
+    }
 }
 
 .this-is-the-nhs__title {
@@ -30,6 +81,18 @@
     padding-right: $gs-gutter / 2;
     background-color: $c-blue;
     text-align: right;
+
+    @include mq(tablet) {
+        margin-left: -$gs-gutter;
+    }
+
+    @include mq(desktop) {
+        max-width: gs-span(7);
+    }
+
+    @include mq(leftCol) {
+        margin-left: gs-span(1);
+    }
 }
 
 .this-is-the-nhs__line--two {
@@ -39,6 +102,14 @@
     margin-left: auto;
     margin-right: -$gs-gutter;
     background-color: $c-dark-blue;
+
+    @include mq(desktop) {
+        max-width: gs-span(7);
+    }
+
+    @include mq(leftCol) {
+        margin-right: gs-span(1);
+    }
 }
 
 .this-is-the-nhs__arrow {
@@ -47,6 +118,12 @@
     max-width: 20%;
     margin-left: -$gs-gutter;
     padding-left: $gs-gutter;
+
+    @include mq(tablet) {
+        margin-left: auto;
+        margin-right: -$gs-gutter;
+        padding-left: 0;
+    }
 
     &:after {
         content: '';
@@ -61,6 +138,13 @@
         border-left-color: $c-yellow;
         border-width: 55px;
         margin-top: -55px;
+
+        @include mq(tablet) {
+            left: auto;
+            right: 100%;
+            border-left-color: transparent;
+            border-right-color: $c-yellow;
+        }
     }
 }
 
@@ -76,16 +160,29 @@
         bottom: 0;
         left: 35%;
         margin: auto;
+
+        @include mq(tablet) {
+            left: 230px;
+        }
     }
 }
 
 .this-is-the-nhs__sign-up__title {
     display: none;
     @include fs-secondary;
+
+    @include mq(tablet) {
+        display: block;
+        margin-top: $gs-baseline;
+    }
 }
 
 .this-is-the-nhs__sign-up__description {
     display: none;
     @include fs-meta;
     color: $c-white;
+
+    @include mq(desktop) {
+        display: block;
+    }
 }
