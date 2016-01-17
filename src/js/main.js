@@ -20,7 +20,12 @@ define([
 
     function init(el, context, config, mediator) {
         var headCount = -1;
-        var target = $('#article');
+        if ($("#article")) {
+            var target = $('#article, .article--standard, .article--immersive');
+        } else {
+            var target = $(".article--standard");
+            alert("Error loading");
+        }
         $.ajax({
             url: 'https://interactive.guim.co.uk/docsdata-test/1MPqC3c6l8wEYWZMBNOx2vKLUz09WAQk5Ml2P03zdMr0.json',
             success: function(response){

@@ -14,6 +14,15 @@
     }
 }
 
+.article--standard, .article--immersive {
+    padding: 0 10px;
+    background-color: $c-white;
+
+    @include mq(mobileLandscape) {
+        padding: 0 20px;
+    }
+}
+
 .this-is-the-nhs__stat-one {
     @include mq(580px) {
         float: right;
