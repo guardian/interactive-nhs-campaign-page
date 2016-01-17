@@ -27,6 +27,7 @@
     margin-bottom: 0;
     letter-spacing: -0.3px;
     padding-right: $gs-gutter / 2;
+    padding-left: $gs-gutter / 2;
 
     @include mq(400px) {
         padding-left: 4px;
@@ -39,12 +40,12 @@
     }
 
     @include mq(desktop) {
-        margin-left: gs-span(3);
+        margin-left: gs-span(2) + ($gs-gutter * 2);
         max-width: gs-span(7);
     }
 
-    @include mq(wide) {
-        margin-left: gs-span(4);
+    @include mq(leftCol) {
+        margin-left: gs-span(3) + $gs-gutter;
     }
 
     p {
@@ -91,7 +92,7 @@
 }
 
 .this-is-the-nhs__line--one {
-    min-width: 215px;
+    min-width: 200px;
     width: 70%;
     max-width: 354px;
     margin-right: auto;
@@ -136,6 +137,7 @@
     position: relative;
     background-color: $c-yellow;
     max-width: 20%;
+    z-index: 5;
 
     @include mq(tablet) {
         margin-left: auto;

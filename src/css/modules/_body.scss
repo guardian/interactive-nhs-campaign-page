@@ -20,6 +20,10 @@
         margin-left: 20px;
     }
 
+    @include mq(tablet) {
+        margin-right: -$gs-gutter * 2;
+    }
+
     @include mq(desktop) {
         width: gs-span(5);
         margin-right: -(gs-span(2) + $gs-gutter);
@@ -70,6 +74,10 @@
 
     @include mq(400px) {
         float: left;
+    }
+
+    @include mq(tablet) {
+        margin-left: -$gs-gutter * 3;
     }
 
     @include mq(desktop) {
