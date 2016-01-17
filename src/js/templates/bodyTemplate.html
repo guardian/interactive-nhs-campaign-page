@@ -1,26 +1,20 @@
 {{#with body[0]}}
-    <section class="chapter" id="petition">
-        <div class="wrapper" id="petitionContainer">
-            <div class="chapterContent" id="mainContent">
-                <div id="petitionForm">
-<!--                     <iframe src="https://www.theguardian.com/email/form/article/3573" height="228px" data-form-title="Sign up for our NHS email" data-form-description="Whether you have a passing interest in the subject or a fascination, have personal experience, or the experience of a family member or loved one, or are a professional, please join in." data-form-campaign-code="NHS_signup_iframe" scrolling="no" seamless="" frameborder="0" class="iframed--overflow-hidden email-sub__iframe js-email-sub__iframe js-email-sub__iframe--article" class="max-col-w"></iframe> -->
-                </div>
-
-                <div id="infoForm">
-                    <div id="standfirst" class="m-col-large">
-                        {{#each text}}
-                        <p>{{{this}}}</p>
-                        {{/each}}
-                    </div>
-
-<!--
-                    <div id="petitionShare">
-                        <p>Help us by spreading the word</p>
-                        <shareContainer media="['facebook','twitter','mail']"/>
-                    </div>
--->
-                </div>
-            </div>
+<div id="this-is-the-nhs__body">
+    <div class="this-is-the-nhs__stat-one">
+        <img class="this-is-the-nhs__stat-image" src="@@assetPath@@/imgs/stat-image--1.png" />
+        <div class="this-is-the-nhs__bar">
+            <div class="this-is-the-nhs__circle"></div>
+            <h3 class="this-is-the-nhs__stat-number">46%</h3>
+            <p class="this-is-the-nhs__stat-description">Is a percentage that probably relates to the NHS</p>
         </div>
-    </section>
+    </div>
+    <div class="this-is-the-nhs__stat-two">
+        <h3 class="this-is-the-nhs__stat-number">23</h3>
+        <p class="this-is-the-nhs__stat-description">Is a percentage that probably relates to the NHS</p>
+        <img class="this-is-the-nhs__stat-image" src="@@assetPath@@/imgs/stat-image--2.png" />
+    </div>
+    {{#each text}}
+        <p>{{{this}}}</p>
+    {{/each}}
+</div>
 {{/with}}

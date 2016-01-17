@@ -1,0 +1,49 @@
+.this-is-the-nhs__stat-one {
+    .this-is-the-nhs__stat-image {
+        display: block;
+        height: 140px;
+    }
+
+    .this-is-the-nhs__bar {
+        position: relative;
+        background-color: $c-dark-blue;
+        color: $c-white;
+        margin-left: 40px;
+        margin-right: -$gs-gutter;
+        padding-right: $gs-gutter;
+    }
+
+    .this-is-the-nhs__stat-number {
+        @include fs-primary;
+    }
+
+    .this-is-the-nhs__stat-description {
+        @include fs-meta;
+        position: absolute;
+        bottom: -3px;
+        left: 134px;
+        right: $gs-gutter;
+        max-width: 180px;
+    }
+}
+
+.this-is-the-nhs__stat-two {
+    position: relative;
+    color: $c-white;
+
+    .this-is-the-nhs__stat-number {
+        @include fs-primary;
+        position: absolute;
+        top: 143px;
+        left: 4px;
+    }
+
+    .this-is-the-nhs__stat-description {
+        @include fs-meta;
+        position: absolute;
+        width: 110px;
+        top: 209px;
+        left: 4px;
+    }
+
+}
