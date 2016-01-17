@@ -77,8 +77,8 @@ define([
     }
 
     function positionStats() {
-        $(".this-is-the-nhs__stat-one").insertAfter("p:nth-of-type(2)");
-        $(".this-is-the-nhs__stat-two").insertAfter("p:nth-of-type(5)");
+        $(".this-is-the-nhs__stat-one").insertAfter(".this-is-the-nhs__body p:nth-of-type(2)");
+        $(".this-is-the-nhs__stat-two").insertAfter(".this-is-the-nhs__body p:nth-of-type(5)");
     }
 
     function shareContent(e, platform, message, url, image){

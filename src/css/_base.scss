@@ -54,3 +54,7 @@ $c-white: #ffffff;
         height: gs-height(2) + $gs-baseline;
     }
 }
+
+.js-on.is-modern .is-immersive-interactive .content--interactive, .js-on.is-modern .is-immersive-interactive .content--interactive ~ *, .js-on.is-modern .is-immersive-interactive .l-footer {
+    display: block;
+}
