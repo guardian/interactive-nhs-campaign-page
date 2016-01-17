@@ -1,4 +1,6 @@
 .this-is-the-nhs__sign-up--bottom {
+    position: relative;
+
     .this-is-the-nhs__arrow {
         background-color: $c-light-blue;
         margin-left: -$gs-gutter;
@@ -42,6 +44,17 @@
 
         @include mq(leftCol) {
             left: gs-span(3);
+        }
+    }
+
+    .this-is-the-nhs__footer-image {
+        display: none;
+
+        @include mq(desktop) {
+            position: absolute;
+            top: -407px; // Height of image
+            right: -$gs-gutter;
+            display: block;
         }
     }
 }
