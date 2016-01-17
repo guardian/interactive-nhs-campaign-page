@@ -1,3 +1,13 @@
+.this-is-the-nhs__body {
+    position: relative;
+    max-width: gs-span(8);
+    margin: 0 auto;
+
+    @include mq(leftCol) {
+        margin-left: gs-span(3);
+    } 
+}
+
 .this-is-the-nhs__stat-one {
     .this-is-the-nhs__stat-image {
         display: block;
