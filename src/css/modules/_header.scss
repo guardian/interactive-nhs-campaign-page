@@ -262,4 +262,16 @@
     position: absolute;
     top: 0;
     right: 0;
+    display: none;
+
+    @include mq(desktop) {
+        display: block;
+        width: 170px;
+        height: auto;
+    }
+
+    @include mq(leftCol) {
+        width: 220px;
+        top: -30px;
+    }
 }

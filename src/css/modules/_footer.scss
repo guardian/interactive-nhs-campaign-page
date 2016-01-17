@@ -61,4 +61,23 @@
             display: block;
         }
     }
+
+    .this-is-the-nhs__hand-two {
+        position: absolute;
+        bottom: 0;
+        left: -$gs-gutter;
+        display: none;
+
+        @include mq(desktop) {
+            display: block;
+            width: 150px;
+            height: auto;
+            bottom: -140px;
+        }
+
+        @include mq(leftCol) {
+            width: 200px;
+            top: -30px;
+        }
+    }
 }
