@@ -5,10 +5,31 @@
 
     @include mq(leftCol) {
         margin-left: gs-span(3);
-    } 
+    }
+
+    p,
+    .this-is-the-nhs__stat-one,
+    .this-is-the-nhs__stat-two {
+        margin-bottom: 1em;
+    }
 }
 
 .this-is-the-nhs__stat-one {
+    @include mq(580px) {
+        float: right;
+        margin-left: 20px;
+    }
+
+    @include mq(desktop) {
+        width: gs-span(5);
+        margin-right: -(gs-span(2) + $gs-gutter);
+    }
+
+    @include mq(leftCol) {
+        width: gs-span(6);
+        margin-right: -(gs-span(3) + $gs-gutter * 2);
+    }
+
     .this-is-the-nhs__stat-image {
         display: block;
         height: 140px;
@@ -34,6 +55,10 @@
         left: 134px;
         right: $gs-gutter;
         max-width: 180px;
+
+        @include mq(desktop) {
+            left: 188px;
+        }
     }
 }
 
@@ -41,6 +66,18 @@
     position: relative;
     color: $c-white;
     width: 210px;
+
+    @include mq(400px) {
+        float: left;
+    }
+
+    @include mq(desktop) {
+        margin-left: -(gs-span(2) + $gs-gutter * 2);
+    }
+
+    @include mq(leftCol) {
+        margin-left: -(gs-span(3) + $gs-gutter);
+    }
 
     .this-is-the-nhs__stat-number {
         @include fs-primary;
@@ -55,6 +92,9 @@
         width: 110px;
         top: 209px;
         left: 4px;
-    }
 
+        @include mq(desktop) {
+            top: 226px;
+        }
+    }
 }
