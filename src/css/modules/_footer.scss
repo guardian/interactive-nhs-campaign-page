@@ -1,6 +1,10 @@
 .this-is-the-nhs__sign-up--bottom {
     position: relative;
 
+    @include mq(desktop) {
+        margin-bottom: gs-height(3);
+    }
+
     .this-is-the-nhs__arrow {
         background-color: $c-light-blue;
         margin-left: -$gs-gutter;

@@ -51,13 +51,14 @@
     .this-is-the-nhs__stat-description {
         @include fs-meta;
         position: absolute;
-        bottom: -3px;
-        left: 134px;
+        bottom: -8px;
+        left: 97px;
         right: $gs-gutter;
         max-width: 180px;
 
         @include mq(desktop) {
-            left: 188px;
+            left: 135px;
+            bottom: -3px;
         }
     }
 }
@@ -84,6 +85,7 @@
         position: absolute;
         top: 143px;
         left: 4px;
+        letter-spacing: -5.2px;
     }
 
     .this-is-the-nhs__stat-description {
