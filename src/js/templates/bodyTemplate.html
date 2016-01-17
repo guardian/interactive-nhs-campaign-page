@@ -1,5 +1,8 @@
 {{#with body[0]}}
 <div id="this-is-the-nhs__body">
+    {{#each text}}
+        <p>{{{this}}}</p>
+    {{/each}}
     <div class="this-is-the-nhs__stat-one">
         <img class="this-is-the-nhs__stat-image" src="@@assetPath@@/imgs/stat-image--1.png" />
         <div class="this-is-the-nhs__bar">
@@ -13,8 +16,5 @@
         <p class="this-is-the-nhs__stat-description">Is a percentage that probably relates to the NHS</p>
         <img class="this-is-the-nhs__stat-image" src="@@assetPath@@/imgs/stat-image--2.png" />
     </div>
-    {{#each text}}
-        <p>{{{this}}}</p>
-    {{/each}}
 </div>
 {{/with}}

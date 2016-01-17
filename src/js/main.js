@@ -71,7 +71,14 @@ define([
             data:data
         })
 
+        positionStats();
+
         app.on('shareContainer.share',shareContent);
+    }
+
+    function positionStats() {
+        $(".this-is-the-nhs__stat-one").insertAfter("p:nth-of-type(2)");
+        $(".this-is-the-nhs__stat-two").insertAfter("p:nth-of-type(5)");
     }
 
     function shareContent(e, platform, message, url, image){

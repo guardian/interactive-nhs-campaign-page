@@ -30,6 +30,7 @@
 .this-is-the-nhs__stat-two {
     position: relative;
     color: $c-white;
+    width: 210px;
 
     .this-is-the-nhs__stat-number {
         @include fs-primary;
