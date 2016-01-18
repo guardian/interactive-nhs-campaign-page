@@ -77,8 +77,6 @@ define([
         })
 
         positionStats();
-
-        app.on('shareContainer.share',shareContent);
     }
 
     function positionStats() {
@@ -86,44 +84,7 @@ define([
         $(".this-is-the-nhs__stat-two").insertAfter(".this-is-the-nhs__body p:nth-of-type(5)");
     }
 
-    function shareContent(e, platform, message, url, image){
-        var shareURL = "http://gu.com/p/4ft63"; // short url will only work in a guardian page
-        var shareWindow;
-        var twitterBaseUrl = "http://twitter.com/share?text=";
-        var facebookBaseUrl = "https://www.facebook.com/dialog/feed?display=popup&app_id=741666719251986&link=";
 
-        var articleUrl = shareURL;
-        var facebookUrl = shareURL;
-        var urlsuffix = url ? url : "";
-        var shareUrl = articleUrl + urlsuffix;
-
-        var fallbackMessage = "The story of one of the most complex organisations in the world, the voices of those on the frontline #ThisIsTheNHS";
-        message = message ? message : fallbackMessage;
-
-        var shareImagePath = "@@assetPath@@/imgs/";
-        var shareImage = image ? shareImagePath + image : shareImagePath + 'logo.png'
-
-        if(platform === "twitter"){
-            shareWindow = 
-                twitterBaseUrl + 
-                encodeURIComponent(message) + 
-                "&url=" + 
-                encodeURIComponent(shareUrl)   
-        }else if(platform === "facebook"){
-            shareWindow = 
-                facebookBaseUrl + 
-                encodeURIComponent(facebookUrl) + 
-                "&picture=" + 
-                encodeURIComponent(shareImage) + 
-                "&redirect_uri=http://www.theguardian.com";
-        }else if(platform === "mail"){
-            shareWindow =
-                "mailto:" +
-                "?subject=" + message +
-                "&body=" + shareUrl 
-        }
-        window.open(shareWindow, platform + "share", "width=640,height=320");
-    }
     return {
         init: init
     };
