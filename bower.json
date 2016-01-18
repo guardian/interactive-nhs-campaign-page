@@ -24,6 +24,7 @@
     "requirejs-plugins": "1.0.3",
     "text": "2.0.10",
     "rvc": "0.2.3",
-    "sass-mq": "~3.2.5"
+    "sass-mq": "~3.2.5",
+    "jquery": "2.2.0"
   }
 }
