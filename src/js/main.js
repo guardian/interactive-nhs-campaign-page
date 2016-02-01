@@ -64,6 +64,19 @@ define([
             }
         };
 
+        var triggerEvent = function (target, type) {
+            var doc = document,
+                event;
+            
+            if (doc.createEvent) {
+                event = new Event(type);
+                target.dispatchEvent(event);
+            } else {
+                event = doc.createEventObject();
+                target.fireEvent('on' + type, event);
+            }
+        };
+
         var app = new Ractive({
             el:el,
             template:appTemplate,
@@ -77,6 +90,7 @@ define([
         })
 
         positionStats();
+        triggerEvent(window, 'interactive-loaded');
     }
 
     function positionStats() {
