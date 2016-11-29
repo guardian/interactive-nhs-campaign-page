@@ -2,7 +2,7 @@
 var pkg = require('./package.json');
 var currentTime = +new Date();
 var versionedAssetPath = 'assets-' + currentTime;
-var CDN = 'http://interactive.guim.co.uk/';
+var CDN = 'https://interactive.guim.co.uk/';
 var deployAssetPath = CDN + pkg.config.s3_folder + versionedAssetPath;
 var localAssetPath = 'https://localhost:' + pkg.config.port + '/assets';
 
